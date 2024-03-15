@@ -1,0 +1,31 @@
+﻿<Window x:Class="FileSystemViewer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FileSystemViewer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        Loaded="Window_Loaded">
+    <Window.DataContext>
+        <local:FileSystemViewModel/>
+    </Window.DataContext>
+    <DockPanel>
+        <Grid Height="434" Width="800">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="127*"/>
+                <ColumnDefinition Width="673*"/>
+            </Grid.ColumnDefinitions>
+            <ListView x:Name="listView" ItemsSource="{Binding Entries}" Grid.ColumnSpan="2">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn x:Name="EntryName" DisplayMemberBinding="{Binding Name}" Header="Name"/>
+                        <GridViewColumn x:Name="EntrySize" DisplayMemberBinding="{Binding Size}" Header="Size"/>
+                        <GridViewColumn x:Name="ModifiedDate" DisplayMemberBinding="{Binding Updated}" Header="Modified On"/>
+                        <GridViewColumn x:Name="ModifiedBy" DisplayMemberBinding="{Binding LastUser}" Header="Modified By"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+    </DockPanel>
+</Window>
