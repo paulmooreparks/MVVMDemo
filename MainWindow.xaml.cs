@@ -27,12 +27,6 @@ namespace FileSystemViewer {
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e) {
-            /*
-            FileSystemService fileSystemService = new FileSystemService();
-            FileSystemViewModel fileSystemViewModel = new FileSystemViewModel();
-            fileSystemViewModel.Load();
-            DataContext = fileSystemViewModel.Entries;
-            */
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e) {
