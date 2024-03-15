@@ -21,16 +21,5 @@ namespace FileSystemViewer {
         public MainWindow() {
             InitializeComponent();
         }
-
-        private void EntryName_SourceUpdated(object sender, DataTransferEventArgs e) {
-
-        }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e) {
-        }
-
-        private void MenuItem_Click(object sender, RoutedEventArgs e) {
-
-        }
     }
 }
